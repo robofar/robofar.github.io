@@ -87,6 +87,43 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
 
+                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <img src='images/pings_3d_reconstruction.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function r2r_start() {
+                                            document.getElementById('r2r_image').style.opacity = "1";
+                                        }
+
+                                        function r2r_stop() {
+                                            document.getElementById('r2r_image').style.opacity = "0";
+                                        }
+                                        r2r_stop()
+                                    </script>
+                                </td>
+
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <a href="https://relight-to-reconstruct.github.io/">
+                                        <span class="papertitle">Visual-LiDaR Large-Scale Mapping using Radiance Field
+                                            and Signed Distance Field</span>
+                                    </a>
+                                    <br>
+                                    <strong>Faris Hajdarpasic</strong>,
+                                    Yue Pan,
+                                    Xingguang Zhong,
+                                    Cyrill Stachniss
+                                    <p></p>
+                                    <p>
+                                        Maps of the environment are essential for autonomous car navigation.
+                                        Metric maps should be ideally both - geometrically accurate and photorealistic.
+                                        To achieve this we propose a method that combines LiDAR and camera data
+                                        and utilizes the radiance field and signed distance field.
+                                    </p>
+                                </td>
+                            </tr>
+
 
 
                             <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
@@ -113,8 +150,8 @@
                                     </a>
                                     <br>
                                     <strong>Faris Hajdarpasic</strong>,
-                                    <a href="https://www.linkedin.com/in/dinko-osmankovic-phd-1726b5260/">Dinko
-                                        Osmankovic</a>,
+                                    Dinko Osmankovic
+                                    <!-- <a href="https://www.linkedin.com/in/dinko-osmankovic-phd-1726b5260/"> Dnko <a/> -->
                                     <br>
                                     <a href="https://github.com/robofar/visual-odometry">GitHub Repository</a>
                                     <p></p>
