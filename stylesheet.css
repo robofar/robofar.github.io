@@ -147,3 +147,9 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.one img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
