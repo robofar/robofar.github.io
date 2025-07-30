@@ -146,3 +146,26 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.project-card {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 32px;
+    border-radius: 8px;
+}
+
+.project-card img {
+    width: 160px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.project-info {
+    flex: 1;
+}
+
+.project-info p {
+    margin: 8px 0;
+}
