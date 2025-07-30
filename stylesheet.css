@@ -117,9 +117,8 @@ h2 {
 }
 
 .one {
-    width: 160px;
-    height: 160px;
-    position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .two {
