@@ -137,6 +137,7 @@
                                     <a
                                         href="https://drive.google.com/drive/folders/1ckTINZRDTCor2JYioPTSryoicwzBBoXD?usp=sharing">PDF
                                         and Presentation</a>
+                                    <p></p>
                                     <a href="https://github.com/robofar/LV-Mapping/tree/test">Code</a>
                                     <p></p>
                                     <p>
@@ -144,6 +145,14 @@
                                         Metric maps should be ideally both - geometrically accurate and photorealistic.
                                         To achieve this we propose a method that combines LiDAR and camera data
                                         and utilizes the radiance field and signed distance field.
+                                        Furthermore, we address the challenge of dynamic object removal in both sensor
+                                        modalities.
+                                        Potentially dynamic objects are detected in the image space using Grounded SAM
+                                        2, while Principal Component Analysis
+                                        (PCA) is employed in the LiDAR space to identify and remove them.
+                                        As a result, we achieve a geometrically accurate and photorealistic
+                                        reconstruction of the static world, even in the
+                                        presence of dynamic elements.
                                     </p>
                                 </td>
                             </tr>
