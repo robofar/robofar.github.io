@@ -104,6 +104,51 @@
                             <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
                                 <td style="padding:16px;width:20%;vertical-align:middle">
                                     <div class="one">
+                                        <img src='images/lidar_slam_c++.png' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function r2r_start() {
+                                            document.getElementById('r2r_image').style.opacity = "1";
+                                        }
+
+                                        function r2r_stop() {
+                                            document.getElementById('r2r_image').style.opacity = "0";
+                                        }
+                                        r2r_stop()
+                                    </script>
+                                </td>
+
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <span class="papertitle">LiDAR-based SLAM </span>
+                                    <br>
+                                    <br>
+                                    <strong>Faris Hajdarpasic</strong>
+                                    <br>
+                                    <a href="https://github.com/robofar/lidar-slam-cpp">GitHub Repository</a>
+                                    <p></p>
+                                    <p>
+                                        I am implementing a LiDAR-based SLAM system in modern C++, featuring odometry
+                                        using point-to-point ICP for scan
+                                        registration. Each incoming LiDAR scan is aligned to a local map represented
+                                        through a spatial hash table.
+                                        The next development stages include adding loop closure detection, pose-graph
+                                        optimization, and extending the system to
+                                        support multi-sensor fusion (GNSS, IMU, and cameras) using a factor-graph
+                                        framework. Visualization is handled through
+                                        <a href="https://rerun.io/">ReRun</a>.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <hr class="project-divider">
+                                </td>
+                            </tr>
+
+                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
                                         <img src='images/rendered_normal_portfolio.png' width=100%>
                                     </div>
                                     <script type="text/javascript">
@@ -138,7 +183,7 @@
                                         href="https://drive.google.com/drive/folders/1ckTINZRDTCor2JYioPTSryoicwzBBoXD?usp=sharing">PDF
                                         and Presentation</a>
                                     <br>
-                                    <a href="https://github.com/robofar/LV-Mapping/tree/test">Code</a>
+                                    <a href="https://github.com/robofar/LV-Mapping/tree/test">GitHub Repository</a>
                                     <p></p>
                                     <p>
                                         Maps of the environment are essential for autonomous car navigation.
