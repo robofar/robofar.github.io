@@ -127,10 +127,7 @@
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle">Feature-based RGB-D Frame-to-Map Tracking</span>
                                     <br>
-                                    <br>
-                                    <strong>Faris Hajdarpasic</strong>
-                                    <br>
-                                    <a href="[https://github.com/robofar/rgbd-odometry]">GitHub Repository</a>
+                                    <a href="https://github.com/robofar/rgbd-odometry">GitHub Repository</a>
                                     <p></p>
                                     <p><b>Keywords</b>: PyTorch, Odometry, RANSAC, PNP, Least Squares, Data Structure
                                     </p>
@@ -142,12 +139,12 @@
                                         The pose is estimated through Frame-to-Map Matching, where frame features are
                                         matched against a local map, filtered robustly using Lowe's test and RANSAC, and
                                         then optimized via weighted Least
-                                        Squares to minimize the 3D-2D reprojection error. The local map is efficiently
+                                        Squares to minimize the 3D-2D reprojection error. The local map is
                                         managed as a Sparse Voxel Grid (Hash
                                         Table) with a FIFO feature replacement policy. The local map is recomputed based
                                         on a
                                         spatial radius around the estimated camera pose and traveled distance to
-                                        maintain only the most relevant features for robust pose tracking.
+                                        maintain only the most relevant features used for next frame pose tracking.
                                     </p>
                                 </td>
                             </tr>
@@ -176,7 +173,6 @@
 
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle">LiDAR-based SLAM </span>
-                                    <br>
                                     <br>
                                     <a href="https://github.com/robofar/lidar-slam-cpp">GitHub Repository</a>
                                     <p></p>
