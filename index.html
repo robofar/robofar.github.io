@@ -56,13 +56,9 @@
                                     </p>
                                     <p style="text-align:center">
                                         <a href="mailto:robofar123@gmail.com">Email</a> &nbsp;/&nbsp;
-                                        <!--a href="data/JonBarron-CV.pdf">CV</a> &nbsp;/&nbsp;-->
-                                        <!--a href="data/JonBarron-bio.txt">Bio</a> &nbsp;/&nbsp;-->
-                                        <!--a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Scholar</a> &nbsp;/&nbsp;-->
                                         <a href="https://www.linkedin.com/in/faris-hajdarpasic/">LinkedIn</a>
                                         &nbsp;/&nbsp;
                                         <a href="https://x.com/hajdarpas1">X</a> &nbsp;/&nbsp;
-                                        <!--a href="https://bsky.app/profile/jonbarron.bsky.social">Bluesky</a> &nbsp;/&nbsp;-->
                                         <a href="https://github.com/robofar">GitHub</a>
                                     </p>
                                 </td>
@@ -111,6 +107,56 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
 
+                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:20%;vertical-align:middle">
+                                    <div class="one">
+                                        <img src='images/fr1desk.gif' width=100%>
+                                    </div>
+                                    <script type="text/javascript">
+                                        function r2r_start() {
+                                            document.getElementById('r2r_image').style.opacity = "1";
+                                        }
+
+                                        function r2r_stop() {
+                                            document.getElementById('r2r_image').style.opacity = "0";
+                                        }
+                                        r2r_stop()
+                                    </script>
+                                </td>
+
+                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                    <span class="papertitle">Feature-based RGB-D Frame-to-Map Tracking</span>
+                                    <br>
+                                    <br>
+                                    <strong>Faris Hajdarpasic</strong>
+                                    <br>
+                                    <a href="[https://github.com/robofar/rgbd-odometry]">GitHub Repository</a>
+                                    <p></p>
+                                    <p><b>Keywords</b>: PyTorch, Odometry, RANSAC, PNP, Least Squares, Data Structure
+                                    </p>
+                                    <p></p>
+                                    <p>
+                                        This project develops an RGB-D Odometry pipeline to estimate the camera's pose
+                                        sequentially.
+                                        First, ORB features are extracted from incoming frame.
+                                        The pose is estimated through Frame-to-Map Matching, where frame features are
+                                        matched against a local map, filtered robustly using Lowe's test and RANSAC, and
+                                        then optimized via weighted Least
+                                        Squares to minimize the 3D-2D reprojection error. The local map is efficiently
+                                        managed as a Sparse Voxel Grid (Hash
+                                        Table) with a FIFO feature replacement policy. The local map is recomputed based
+                                        on a
+                                        spatial radius around the estimated camera pose and traveled distance to
+                                        maintain only the most relevant features for robust pose tracking.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2">
+                                    <hr class="project-divider">
+                                </td>
+                            </tr>
                             <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
                                 <td style="padding:16px;width:20%;vertical-align:middle">
                                     <div class="one">
@@ -175,12 +221,6 @@
                                     </script>
                                 </td>
 
-                                <!--
-                                <a href="https://relight-to-reconstruct.github.io/">
-                                    <span class="papertitle">Visual-LiDaR Large-Scale Mapping using Radiance Field
-                                        and Signed Distance Field</span>
-                                </a>
-                                -->
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle">Large-Scale LiDAR-Visual Mapping using Gaussian Splatting
                                         and Neural Distance Field </span>
@@ -241,12 +281,6 @@
                                     </script>
                                 </td>
 
-                                <!--
-                                <a href="https://relight-to-reconstruct.github.io/">
-                                    <span class="papertitle">Visual-LiDaR Large-Scale Mapping using Radiance Field
-                                    and Signed Distance Field</span>
-                                </a>
-                                -->
                                 <td style="padding:8px;width:80%;vertical-align:middle">
                                     <span class="papertitle">Parallel Computing Lab: NVIDIA CUDA C++ Programming</span>
                                     <br>
@@ -299,7 +333,6 @@
                                     <br>
                                     <strong>Faris Hajdarpasic</strong>,
                                     Dinko Osmankovic
-                                    <!-- <a href="https://www.linkedin.com/in/dinko-osmankovic-phd-1726b5260/"> Dnko <a/> -->
                                     <br>
                                     <a href="https://github.com/robofar/visual-odometry">GitHub Repository</a>
                                     <p></p>
@@ -349,7 +382,6 @@
                                     Panyawat Rattana,
                                     Björn Seine,
                                     Lasse Klingbeil
-                                    <!-- <a href="https://www.linkedin.com/in/dinko-osmankovic-phd-1726b5260/"> Dnko <a/> -->
                                     <br>
                                     <a
                                         href="https://drive.google.com/drive/folders/1XrqVdMWIsFqZ_qAZwP9TpVfjHB4wDkfX?usp=sharing">Report
@@ -396,7 +428,6 @@
                                     <br>
                                     <strong>Faris Hajdarpasic</strong>,
                                     Zeljko Juric
-                                    <!-- <a href="https://www.linkedin.com/in/dinko-osmankovic-phd-1726b5260/"> Dnko <a/> -->
                                     <br>
                                     <a href="https://github.com/robofar/cpp-course">GitHub Repository</a>
                                     <p></p>
@@ -414,67 +445,8 @@
                                 </td>
                             </tr>
 
-                            <!--
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
-                                    <div class="one">
-                                        <img src='images/cudalab.jpg' width=100%>
-                                    </div>
-                                    <script type="text/javascript">
-                                        function r2r_start() {
-                                            document.getElementById('r2r_image').style.opacity = "1";
-                                        }
-
-                                        function r2r_stop() {
-                                            document.getElementById('r2r_image').style.opacity = "0";
-                                        }
-                                        r2r_stop()
-                                    </script>
-                                </td>
-
-                                <td style="padding:8px;width:80%;vertical-align:middle">
-                                    <span class="papertitle">Lab Vision Systems: Learning Computer Vision on GPUs [In
-                                        Progress]</span>
-                                    <br>
-                                    <br>
-                                    <strong>Faris Hajdarpasic</strong>,
-                                    Angel Villar-Corrales,
-                                    Sven Behnke
-                                    <br>
-                                    <a href="https://github.com/robofar/deep-learning-lab">GitHub Repository</a>
-                                    <p></p>
-                                    <p>
-                                        This lab focuses on implementing deep learning architectures for visual pattern
-                                        recognition using PyTorch library.
-                                    </p>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
-                            -->
-
-
-
-
-
-
-
-
-
-
-
-
                         </tbody>
                     </table>
-
-
-
-
-
                 </td>
             </tr>
     </table>
