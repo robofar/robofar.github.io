@@ -33,7 +33,7 @@
                                         I am a graduated Master student at the <a
                                             href="https://www.uni-bonn.de/en/home">University of Bonn </a>
                                         where I was specializing in Mobile Sensing and Robotics.
-                                        My studies mostly focused around SLAM and computer vision,
+                                        My studies mostly focused around SLAM and 3D scene reconstruction,
                                         where I took projects and courses
                                         with multiple research groups of the
                                         <a href="https://www.robotics.uni-bonn.de/">Center for Robotics University of
@@ -43,16 +43,23 @@
                                             Lab)</a>
                                         and I was research student assistant at the
                                         <a href="https://www.hrl.uni-bonn.de/">Humanoid Robots Lab</a>.
+                                        In 2024, I was selected to participate in the
+                                        <a href="https://robotics-summerschool.ethz.ch/">Robotics Summer School</a>
+                                        organized by ETH Zurich.
                                     </p>
                                     <p>
-                                        Mapping is amazing and useful!
-                                        Creating detailed maps of the world is a cool task one can do.
-                                        I want to contribute to this field, learn from like-minded people and enhance
-                                        maps even further.
-                                        Do not hesitate to contact me if you are interested in my work or have any
-                                        questions.
-                                        I am always open to new opportunities and collaborations.
-                                        Let's connect and make maps even better, together!
+                                        My core interest lies in two fundamental problems: <strong>precise localization</strong> and
+                                        <strong>reality mapping</strong> — knowing exactly where we are in the world and accurately
+                                        modeling it in 3D from real-world sensor data.
+                                        I want to go beyond purely geometric maps — building rich 3D representations
+                                        that embed semantic, photometric, and structural information, serving as a
+                                        foundation for downstream tasks such as scene understanding, autonomous
+                                        navigation, geospatial analysis, and data-driven decision-making.
+                                    </p>
+                                    <p>
+                                        I believe that accurate, information-rich 3D representations of the world are
+                                        fundamental infrastructure — valuable far beyond any single domain, wherever
+                                        there is a need to understand, analyze, or interact with the physical world.
                                     </p>
                                     <p style="text-align:center">
                                         <a href="mailto:robofar123@gmail.com">Email</a> &nbsp;/&nbsp;
@@ -107,106 +114,42 @@
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
 
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
+                            <tr class="project-c1" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
                                     <div class="one">
-                                        <img src='images/fr1desk.gif' width=100%>
+                                        <img src='images/lsgsr.gif' width=100%>
                                     </div>
-                                    <script type="text/javascript">
-                                        function r2r_start() {
-                                            document.getElementById('r2r_image').style.opacity = "1";
-                                        }
-
-                                        function r2r_stop() {
-                                            document.getElementById('r2r_image').style.opacity = "0";
-                                        }
-                                        r2r_stop()
-                                    </script>
                                 </td>
 
-                                <td style="padding:8px;width:80%;vertical-align:middle">
-                                    <span class="papertitle">Feature-based RGB-D Frame-to-Map Tracking</span>
+                                <td style="padding:16px;width:70%;vertical-align:top">
+                                    <span class="papertitle">Large-Scale Gaussian Splatting Renderer</span>
                                     <br>
-                                    <a href="https://github.com/robofar/rgbd-odometry">GitHub Repository</a>
+                                    <br>
+                                    <strong>Faris Hajdarpasic</strong>
+                                    <br>
+                                    <a href="https://github.com/robofar/LSGSR">GitHub Repository</a>
                                     <p></p>
-                                    <p><b>Keywords</b>: PyTorch, C++, pybind11, Odometry, RANSAC, PNP, Least Squares,
-                                        Data
-                                        Structures
-                                    </p>
+                                    <p><b>Keywords</b>: C++, CUDA, Gaussian Splatting, Level-of-Detail, Octree, OpenGL</p>
                                     <p></p>
                                     <p>
-                                        This project develops an RGB-D Odometry pipeline to estimate the camera's pose
-                                        sequentially.
-                                        First, ORB features are extracted from incoming frame.
-                                        The pose is estimated through Frame-to-Map Matching, where frame features are
-                                        matched against a local map, filtered robustly using Lowe's test and RANSAC, and
-                                        then optimized via weighted Least
-                                        Squares to minimize the 3D-2D reprojection error. The local map is
-                                        managed as a Sparse Voxel Grid (Hash
-                                        Table) with a FIFO feature replacement policy. The local map is recomputed based
-                                        on a
-                                        spatial radius around the estimated camera pose and traveled distance to
-                                        maintain only the most relevant features used for next frame pose tracking.
-                                        The Voxel Hash Map is implemented in C++ with Python bindings via pybind11.
+                                        A renderer for large-scale 3D Gaussian Splatting scenes that exceed GPU memory
+                                        capacity. The scene is organized in an octree where each internal node contains
+                                        coarser Gaussians representing the Gaussians in its children. Per frame, the
+                                        octree is traversed to select a frustum-visible subset, choosing finer
+                                        detail for Gaussians close to the camera and coarser approximations for
+                                        distant ones. The selected Gaussians are streamed to the
+                                        GPU and rasterized using the diff-gaussian-rasterization kernel, enabling
+                                        efficient rendering of scenes that would otherwise not fit in GPU memory.
                                     </p>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
-                                    <div class="one">
-                                        <img src='images/lidar_slam_rerun.png' width=100%>
-                                    </div>
-                                    <script type="text/javascript">
-                                        function r2r_start() {
-                                            document.getElementById('r2r_image').style.opacity = "1";
-                                        }
 
-                                        function r2r_stop() {
-                                            document.getElementById('r2r_image').style.opacity = "0";
-                                        }
-                                        r2r_stop()
-                                    </script>
-                                </td>
-
-                                <td style="padding:8px;width:80%;vertical-align:middle">
-                                    <span class="papertitle">LiDAR-based SLAM </span>
-                                    <br>
-                                    <a href="https://github.com/robofar/lidar-slam-cpp">GitHub Repository</a>
-                                    <p></p>
-                                    <p><b>Keywords</b>: C++, Eigen, Sophus, ICP, Non-Linear Least Squares, Factor Graph
-                                    </p>
-                                    <p></p>
-                                    <p>
-                                        This projects implements a LiDAR-based SLAM system in modern C++, featuring
-                                        odometry
-                                        using point-to-point ICP for scan
-                                        registration. Each incoming LiDAR scan is aligned to a local map represented
-                                        through a spatial hash table.
-                                        The next development stages include adding loop closure detection, pose-graph
-                                        optimization, and extending the system to
-                                        support multi-sensor fusion (GNSS, IMU, and cameras) using a factor-graph
-                                        framework. Visualization is handled through
-                                        <a href="https://rerun.io/">ReRun</a>.
-                                    </p>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
-
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
+                            <tr class="project-c2" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
                                     <div class="one">
                                         <img src='images/rendered_normal_portfolio.png' width=100%>
+
                                     </div>
                                     <script type="text/javascript">
                                         function r2r_start() {
@@ -220,9 +163,11 @@
                                     </script>
                                 </td>
 
-                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                <td style="padding:16px;width:70%;vertical-align:top">
                                     <span class="papertitle">Large-Scale LiDAR-Visual Mapping using Gaussian Splatting
                                         and Neural Distance Field </span>
+                                    <br>
+                                    <em>Master Thesis</em>
                                     <br>
                                     <br>
                                     <strong>Faris Hajdarpasic</strong>,
@@ -236,35 +181,56 @@
                                     <br>
                                     <a href="https://github.com/robofar/LV-Mapping/tree/test">GitHub Repository</a>
                                     <p></p>
-                                    <p><b>Keywords</b>: Python, PyTorch, AutoGrad, Signed Distane Field, Radiance Field,
-                                        Deep
-                                        Learning, Clustering </p>
+                                    <p><b>Keywords</b>: PyTorch, AutoGrad, Python, Signed Distance Field, Radiance Field,
+                                        Deep Learning, Clustering </p>
                                     <p></p>
                                     <p>
-                                        Maps of the environment are essential for autonomous car navigation.
-                                        Metric maps should be ideally both - geometrically accurate and photorealistic.
-                                        To achieve this we propose a method that combines LiDAR and camera data
-                                        and utilizes the radiance field and signed distance field.
-                                        Furthermore, we address the challenge of dynamic object removal in both sensor
-                                        modalities.
-                                        Potentially dynamic objects are detected in the image space using Grounded SAM
-                                        2, while Principal Component Analysis
-                                        (PCA) is employed in the LiDAR space to identify and remove them.
-                                        As a result, we achieve a geometrically accurate and photorealistic
-                                        reconstruction of the static world, even in the
-                                        presence of dynamic elements.
+                                        Accurate and photorealistic 3D maps of the environment are valuable across
+                                        a wide range of applications. We propose a method that combines LiDAR and
+                                        camera data, utilizing a radiance field and signed distance field to produce
+                                        maps that are both geometrically accurate and photorealistic.
+                                        We also address the challenge of dynamic object removal in both sensor
+                                        modalities — detecting potentially dynamic objects in image space using
+                                        Grounded SAM 2, and identifying them in LiDAR space using Principal Component
+                                        Analysis (PCA) — achieving a clean reconstruction of the static world even
+                                        in the presence of dynamic elements.
                                     </p>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
+
+                            <tr class="project-c3" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
+                                    <div class="one">
+                                        <img src='images/rgbd_slam.png' width=100%>
+                                    </div>
+                                </td>
+
+                                <td style="padding:16px;width:70%;vertical-align:top">
+                                    <span class="papertitle">Feature-based RGB-D Visual SLAM</span>
+                                    <br>
+                                    <br>
+                                    <strong>Faris Hajdarpasic</strong>
+                                    <br>
+                                    <a href="https://github.com/robofar/RGB-D-SLAM">GitHub Repository</a>
+                                    <p></p>
+                                    <p><b>Keywords</b>: C++, ORB, SLAM, Bundle Adjustment, Factor Graph, GTSAM, Sophus, Rerun</p>
+                                    <p></p>
+                                    <p>
+                                        A C++ implementation of a feature-based RGB-D visual SLAM system. Frames are
+                                        tracked against a local map using ORB features, with pose estimation via
+                                        P3P+RANSAC and motion-only bundle adjustment. Local mapping manages keyframe
+                                        selection, landmark creation, covisibility graph updates, and culling of
+                                        low-quality map points. Poses and landmarks are jointly refined through local
+                                        bundle adjustment using a factor graph framework, with pose graph optimization
+                                        for global consistency.
+                                    </p>
                                 </td>
                             </tr>
 
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
+
+                            <tr class="project-c4" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
                                     <div class="one">
                                         <img src='images/cuda_lab_portfolio.png' width=100%>
                                     </div>
@@ -280,7 +246,7 @@
                                     </script>
                                 </td>
 
-                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                <td style="padding:16px;width:70%;vertical-align:top">
                                     <span class="papertitle">Parallel Computing Lab: NVIDIA CUDA C++ Programming</span>
                                     <br>
                                     <br>
@@ -293,23 +259,17 @@
                                     <p><b>Keywords</b>: C++, CUDA, GPU, Path Planning, Visibility Graph, A* </p>
                                     <p></p>
                                     <p>
-                                        The goal of this project was to become familiar with the NVIDIA CUDA programming
-                                        framework in C++,
-                                        and to implement the A* path planning algorithm based on a computed Visibility
-                                        Graph, both on the CPU and GPU.
+                                        This project implements the A* path planning algorithm on a precomputed
+                                        Visibility Graph using the NVIDIA CUDA framework, with both CPU and GPU
+                                        versions developed and compared to analyze the performance benefits of
+                                        GPU parallelism for computationally intensive graph search.
                                     </p>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
 
-
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
+                            <tr class="project-c5" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
                                     <div class="one">
                                         <img src='images/bachelor_vo.png' width=100%>
                                     </div>
@@ -325,9 +285,11 @@
                                     </script>
                                 </td>
 
-                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                <td style="padding:16px;width:70%;vertical-align:top">
                                     <span class="papertitle">Monocular and Stereo Visual Odometry for Autonomous
                                         Vehicles</span>
+                                    <br>
+                                    <em>Bachelor Thesis</em>
                                     <br>
                                     <br>
                                     <strong>Faris Hajdarpasic</strong>,
@@ -339,24 +301,17 @@
                                     </p>
                                     <p></p>
                                     <p>
-                                        Visual odometry is a technique used to estimate the pose of a vehicle
-                                        in world frame using only visual information from a camera.
-                                        In this project, we implemented a visual odometry based on single camera and
-                                        stereo camera.
+                                        This project implements monocular and stereo visual odometry
+                                        pipelines for estimating the 6-DoF pose of a vehicle from camera data alone,
+                                        covering the full pipeline from feature extraction and matching to pose
+                                        estimation using multiple view geometry.
                                     </p>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
 
-
-
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
+                            <tr class="project-c6" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
                                     <div class="one">
                                         <img src='images/aemss.png' width=100%>
                                     </div>
@@ -372,7 +327,7 @@
                                     </script>
                                 </td>
 
-                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                <td style="padding:16px;width:70%;vertical-align:top">
                                     <span class="papertitle">Application and Evaluation of Mobile Sensor Systems</span>
                                     <br>
                                     <br>
@@ -389,23 +344,18 @@
                                     <p><b>Keywords</b>: Python, Extended Kalman Filter, LiDAR, IMU, GNSS </p>
                                     <p></p>
                                     <p>
-                                        Goal of this project is acquisition, processing and evaluation of 3D point
-                                        cloud data. Campus library was measured twice - using TLS and MMS (mobile
-                                        mapping system)
-                                        consisting of LiDAR, IMU and GNSS antenna.
-                                        We obtained two georeferenced PCDs and compared them using different techniques.
+                                        This project focused on the acquisition, processing, and evaluation of 3D
+                                        point cloud data. A campus library was measured twice — using TLS and a
+                                        mobile mapping system (MMS) consisting of LiDAR, IMU, and GNSS antenna.
+                                        Two georeferenced point clouds were obtained and compared using multiple
+                                        evaluation techniques.
                                     </p>
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
 
-                            <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-                                <td style="padding:16px;width:20%;vertical-align:middle">
+                            <tr class="project-c7" onmouseout="r2r_stop()" onmouseover="r2r_start()">
+                                <td style="padding:16px;width:30%;vertical-align:top">
                                     <div class="one">
                                         <img src='images/c++.png' width=100%>
                                     </div>
@@ -421,7 +371,7 @@
                                     </script>
                                 </td>
 
-                                <td style="padding:8px;width:80%;vertical-align:middle">
+                                <td style="padding:16px;width:70%;vertical-align:top">
                                     <span class="papertitle">Programming Techniques in C++</span>
                                     <br>
                                     <br>
@@ -438,11 +388,6 @@
                                 </td>
                             </tr>
 
-                            <tr>
-                                <td colspan="2">
-                                    <hr class="project-divider">
-                                </td>
-                            </tr>
 
                         </tbody>
                     </table>
